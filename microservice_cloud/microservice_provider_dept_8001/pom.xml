@@ -12,6 +12,7 @@
     <artifactId>microservice_provider_dept_8001</artifactId>
 
     <dependencies>
+
         <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-core</artifactId>

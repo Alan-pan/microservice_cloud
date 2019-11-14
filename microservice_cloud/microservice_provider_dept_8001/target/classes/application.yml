@@ -26,13 +26,15 @@ spring:
 eureka:
   client:
     service-url:
-      # 单机版注册服务defaultZone: http://localhost:7001/eureka   # 注册服务
-      defaultZone:  http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
+#      单机版注册服务
+       defaultZone: http://localhost:7001/eureka
+#       注册服务
+#      defaultZone:  http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
   instance:
-    instance-id: leaguecloud-dept8001
-    prefer-ip-address: true
+    instance-id: dept_8001
+    prefer-ip-address: true #显示ip地址
 info:
-  app.name: leaguecloud
-  company.name: www.myzp.store
-  build.artifactId: $project.artifactId$
-  vuild.version: $project.version$
+  app.name: microservice_cloud
+  company.name: atguigu
+  build.artifactId: microservice_provider_dept_8001
+  vuild.version: 1.0-SNAPSHOT

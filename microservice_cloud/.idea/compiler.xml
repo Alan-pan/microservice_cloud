@@ -7,7 +7,9 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="microservice_cloud_api" />
+        <module name="microservice_eureka_7002" />
         <module name="microservice_provider_dept_8001" />
+        <module name="microservice_eureka_7001" />
         <module name="microservice_consumer_dept_80" />
       </profile>
     </annotationProcessing>
@@ -15,6 +17,8 @@
       <module name="microservice_cloud" target="1.8" />
       <module name="microservice_cloud_api" target="1.8" />
       <module name="microservice_consumer_dept_80" target="1.8" />
+      <module name="microservice_eureka_7001" target="1.8" />
+      <module name="microservice_eureka_7002" target="1.8" />
       <module name="microservice_provider_dept_8001" target="1.8" />
     </bytecodeTargetLevel>
   </component>

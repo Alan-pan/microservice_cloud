@@ -11,6 +11,8 @@
         <module>microservice_cloud_api</module>
         <module>microservice_provider_dept_8001</module>
         <module>microservice_consumer_dept_80</module>
+        <module>microservice_eureka_7001</module>
+        <module>microservice_eureka_7002</module>
     </modules>
 
     <packaging>pom</packaging>
@@ -71,4 +73,26 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
+
+    <!--标识允许访问src\main\resources，并且开启过滤，使用插件解析 以此$开头结尾的-->
+    <build>
+        <finalName>microservice_cloud</finalName>
+        <resources>
+            <resource>
+                <directory>src\main\resources</directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <configuration>
+                    <delimiters>
+                        <delimiter>$</delimiter>
+                    </delimiters>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>
