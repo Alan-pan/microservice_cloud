@@ -1,0 +1,25 @@
+server:
+  port: 7003
+
+eureka:
+  instance:
+    hostname: eureka7003.com
+
+      #单机版本
+  #    hostname: localhost #eureka服务端的实例名称
+#更改hosts文件增加域名映射
+#    127.0.0.1 eureka7001.com
+#    127.0.0.1 eureka7002.com
+#    127.0.0.1 eureka7003.com
+  server:
+    enable-self-preservation: true #自我保护机制默认开启
+  client:
+    register-with-eureka: false #表示不向注册中心注册自己
+    fetch-registry: false #并不去检索服务
+    service-url:
+        #配置另外两个
+        defaultZone: http://eureka7001.com:7002/eureka/,http://eureka7002.com:7003/eureka/
+
+
+      #单机版
+#     defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/ #配置与eureka Server交互地址服务和注册服务地址
