@@ -15,7 +15,11 @@ public class DeptController {
     @Autowired
     RestTemplate restTemplate;//用于访问rest的客户端模块
 
-    private static final String REST_URL_PREFIX="http://localhost:8001";
+    //写死的端口加ip
+    //private static final String REST_URL_PREFIX="http://localhost:8001";
+    //使用eureka的提供暴露的地址
+    private static final String REST_URL_PREFIX="http://MICROSERVICE-DEPT";
+
 
     @RequestMapping("/consumer/dept/add")
     public boolean add(Dept dept){
