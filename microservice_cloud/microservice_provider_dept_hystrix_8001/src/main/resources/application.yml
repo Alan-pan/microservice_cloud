@@ -38,3 +38,9 @@ info:
   company.name: atguigu
   build.artifactId: $project.artifactId$
   vuild.version: $project.version$
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: hystrix.stream

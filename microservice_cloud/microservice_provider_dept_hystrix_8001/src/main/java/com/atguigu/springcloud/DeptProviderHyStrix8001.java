@@ -7,7 +7,7 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
 @EnableEurekaClient//提供方eureka
-@EnableDiscoveryClient//提供方服务发现
+@EnableDiscoveryClient//提供方eureka发现
 @EnableCircuitBreaker //提供方服务熔断
 @SpringBootApplication
 public class DeptProviderHyStrix8001 {

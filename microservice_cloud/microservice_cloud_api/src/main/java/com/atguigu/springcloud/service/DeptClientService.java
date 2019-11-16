@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import java.util.List;
 //服务熔断处理异常 服务降级处理宕机
 //feign解耦 增加服务降级处理 让客户端在服务端不可用时获得提示信息，不会挂起耗死的服务器
+//提供注释可以在控制层直接调用此api的service
 @FeignClient(value = "MICROSERVICE-DEPT",fallbackFactory = DeptClientServiceFallbackFactory.class)
 public interface DeptClientService {
 

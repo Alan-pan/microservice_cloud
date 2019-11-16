@@ -26,7 +26,8 @@ public class DeptController {
 
     @GetMapping("/dept/get/{id}")
 //解耦了使用fallbackfactory在cloud-api中
-//@HystrixCommand(fallbackMethod = "hystrix_get")
+//服务熔断返回方法->在服务提供方查询返回异常处理
+    @HystrixCommand(fallbackMethod = "hystrix_get")
     public Dept get(@PathVariable("id")Long id){
         Dept dept = service.get(id);
         if (null==dept){

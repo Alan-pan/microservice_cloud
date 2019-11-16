@@ -7,7 +7,7 @@ import org.springframework.cloud.netflix.feign.EnableFeignClients;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@EnableEurekaClient //eureka客户端
+@EnableEurekaClient //支持eureka客户端
 @EnableFeignClients(basePackages = "com.atguigu.springcloud")
 @ComponentScan("com.atguigu.springcloud")
 public class DpetConsumer80Feign {

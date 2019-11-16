@@ -1,10 +1,10 @@
 server:
   port: 80
-
-feign:  #客户端开启服务降级
+#客户端开启服务降级
+feign:
   hystrix:
     enabled: true
-
+#开启feign负载均衡 调用service
 eureka:
   client:
     register-with-eureka: false #自己不需要注册
