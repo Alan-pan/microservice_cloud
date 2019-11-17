@@ -1,0 +1,35 @@
+server:
+  port: 9527
+
+
+spring:
+  application:
+    name: microservice-zuul-gateway
+
+
+eureka:
+  client:
+    service-url:
+      # 单机版注册服务defaultZone: http://localhost:7001/eureka   # 注册服务
+      defaultZone:  http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
+  instance:
+    instance-id: gateway-9527.com
+    prefer-ip-address: true
+info:
+  app.name: microservice
+  company.name: atguigu
+  build.artifactId: $project.artifactId$
+  vuild.version: $project.version$
+
+#  配置zuul映射
+zuul:
+  routes:
+     mydept.serviceId: microservice-dept
+     #--->http://zuul.com:9527/mydept/dept/list
+     mydept.path: /mydept/**
+   #隐藏原来注册名
+#  ignored-services: microservice-dept
+  #隐藏所有虚拟服务
+  ignored-services: "*"
+  #网址前缀->http://zuul.com:9527/atguigu/mydept/dept/list
+  prefix: /atguigu
