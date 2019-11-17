@@ -18,7 +18,7 @@ eureka:
     fetch-registry: false #并不去检索服务
     service-url:
         #配置另外两个
-        defaultZone: http://eureka7001.com:7002/eureka/,http://eureka7003.com:7003/eureka/
+        defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7003.com:7003/eureka/
 
 
       #单机版
